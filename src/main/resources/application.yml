@@ -14,3 +14,19 @@ server:
 logging:
   level:
     root: DEBUG
+
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /metrics
+      exposure:
+        include: ['prometheus']
+  metrics:
+    export:
+      prometheus:
+        enabled: true
