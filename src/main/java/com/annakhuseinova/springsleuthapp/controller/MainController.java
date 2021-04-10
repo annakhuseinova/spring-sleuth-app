@@ -22,7 +22,7 @@ public class MainController {
     /**
      * Activate something
      * */
-    @PostMapping("${urls.activate}")
+    @PostMapping("/activate")
     public ResponseEntity<String> activateSomething(@RequestBody ActivationDto activationDto) throws InterruptedException {
         return ResponseEntity.status(200).body(activationService.activate(activationDto));
     }
